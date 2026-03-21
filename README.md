@@ -1,17 +1,26 @@
 # 🚀 Anmol Chauhan Portfolio
 
-Frontend portfolio website built using HTML, CSS, JavaScript.
+A modern full-stack portfolio website showcasing my projects, skills, and development journey.
 
-## Features
-- Responsive design
-- Modern UI
-- Projects showcase
+## 🌐 Features
+- Responsive UI
+- Sidebar-based layout
+- Project showcase
+- Contact form (frontend)
 
-## Tech Stack
+## 🛠 Tech Stack
 - HTML
 - CSS
 - JavaScript
 
-## Future Improvements
-- Backend integration
-- Contact form functionality
+## 🔜 Upcoming
+- Backend integration (Node.js + Express)
+- Live deployment
+
+## 📸 Preview
+<img width="1920" height="882" alt="image" src="https://github.com/user-attachments/assets/4934b272-5f01-423f-81b0-a93b3c3e7930" />
+<img width="1920" height="891" alt="image" src="https://github.com/user-attachments/assets/3807b0bf-65b8-4189-80a9-4679b3b7b4f6" />
+
+
+## 🔗 Live Demo
+(coming soon)
