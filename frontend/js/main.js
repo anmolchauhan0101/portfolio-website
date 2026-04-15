@@ -1,6 +1,5 @@
 const API = "http://localhost:5000/api";
 
-/* ------------------ HELPERS ------------------ */
 const setText = (id, text) => {
   const el = document.getElementById(id);
   if (el) el.innerText = text;
