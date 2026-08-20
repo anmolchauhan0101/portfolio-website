@@ -1,0 +1,2318 @@
+/* =========================================================
+   ANMOL CHAUHAN — PERSONAL PORTFOLIO
+   Clean / Compact / Professional
+   ========================================================= */
+
+
+/* =========================================================
+   IMPORTS
+   ========================================================= */
+
+@import url(
+  "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+);
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+  --bg: #050505;
+  --surface: #0a0a0a;
+  --surface-2: #0f0f0f;
+
+  --white: #ffffff;
+  --text: #ededed;
+  --muted: #858585;
+  --dim: #5c5c5c;
+
+  --border: rgba(255, 255, 255, 0.09);
+  --border-hover: rgba(255, 255, 255, 0.17);
+
+  --green: #4ade80;
+
+  --container: 1180px;
+
+  --nav-height: 70px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-width: 320px;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: "Inter", sans-serif;
+
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.app {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 82% 4%,
+      rgba(255, 255, 255, 0.035),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 8% 40%,
+      rgba(255, 255, 255, 0.018),
+      transparent 24%
+    ),
+    var(--bg);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+main {
+  width: min(
+    var(--container),
+    calc(100% - 64px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+
+  top: 18px;
+  left: 50%;
+
+  z-index: 1000;
+
+  width: min(
+    var(--container),
+    calc(100% - 64px)
+  );
+
+  height: var(--nav-height);
+
+  transform: translateX(-50%);
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: rgba(
+    7,
+    7,
+    7,
+    0.91
+  );
+
+  border: 1px solid var(--border);
+
+  border-radius: 17px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 15px 50px
+      rgba(0, 0, 0, 0.35);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+  justify-self: start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 19px;
+
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #050505;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.logo strong {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  transform:
+    translateX(-50%);
+
+  background: #ffffff;
+
+  transition:
+    width 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   NAV SOCIALS
+   ========================================================= */
+
+.nav-socials {
+  justify-self: end;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.nav-socials a {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #777777;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s var(--ease);
+}
+
+.nav-socials a:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  border-color:
+    var(--border-hover);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.03fr)
+    minmax(400px, 0.97fr);
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding:
+    128px 0 78px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+  width: 100%;
+
+  max-width: 650px;
+}
+
+.status {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 27px;
+
+  padding:
+    8px 13px;
+
+  color: #9a9a9a;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 11px;
+}
+
+.status span {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 auto;
+
+  background:
+    var(--green);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 12px
+      rgba(74, 222, 128, 0.7);
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.small-heading {
+  margin: 0 0 12px;
+
+  color: #686868;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      72px,
+      7vw,
+      106px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.88;
+
+  letter-spacing: -6px;
+}
+
+.hero h1 span {
+  color: #5e5e5e;
+}
+
+.hero h2 {
+  margin: 27px 0 0;
+
+  color: #f2f2f2;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      24px,
+      2.3vw,
+      31px
+    );
+
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  max-width: 570px;
+
+  margin: 16px 0 0;
+
+  color: #777777;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.primary-button,
+.secondary-button {
+  min-height: 45px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding:
+    0 17px;
+
+  border-radius: 10px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s var(--ease),
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primary-button {
+  color: #050505;
+
+  background: #ffffff;
+
+  border: 1px solid #ffffff;
+}
+
+.primary-button:hover {
+  transform:
+    translateY(-2px);
+
+  background: #e9e9e9;
+}
+
+.secondary-button {
+  color: #cfcfcf;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  border-color:
+    var(--border-hover);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO BUTTON ROW
+   ========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 29px;
+}
+
+
+/* =========================================================
+   HERO STATS
+   ========================================================= */
+
+.hero-stats {
+  max-width: 590px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  margin-top: 38px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.stat-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.hero-stats strong {
+  color: #ffffff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.8px;
+}
+
+.hero-stats span {
+  color: #626262;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
+
+.profile-photo-card {
+  position: relative;
+
+  width: 280px;
+  height: 330px;
+
+  padding: 7px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+
+  border-radius: 21px;
+
+  box-shadow:
+    0 25px 65px
+      rgba(0, 0, 0, 0.42);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position:
+    center top;
+
+  background: #111111;
+
+  border-radius: 15px;
+}
+
+
+/* =========================================================
+   PROFILE BADGE
+   ========================================================= */
+
+.profile-badge {
+  position: absolute;
+
+  right: -32px;
+
+  bottom: 24px;
+
+  min-height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    0 12px;
+
+  color: #d0d0d0;
+
+  background: #080808;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 999px;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 10px 25px
+      rgba(0, 0, 0, 0.3);
+}
+
+.profile-badge span {
+  width: 6px;
+  height: 6px;
+
+  background:
+    var(--green);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 8px
+      rgba(74, 222, 128, 0.7);
+}
+
+
+/* =========================================================
+   DEVELOPER.JS CARD
+   ========================================================= */
+
+.code-card {
+  width: min(
+    100%,
+    530px
+  );
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 20px 55px
+      rgba(0, 0, 0, 0.28);
+}
+
+.code-header {
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding:
+    0 15px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+.window-buttons {
+  display: flex;
+
+  gap: 5px;
+}
+
+.window-buttons span {
+  width: 7px;
+  height: 7px;
+
+  background: #505050;
+
+  border-radius: 50%;
+}
+
+.code-header p {
+  margin:
+    0 0 0 11px;
+
+  color: #646464;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 9px;
+}
+
+.code-card pre {
+  margin: 0;
+
+  padding:
+    19px 21px;
+
+  color: #8b8b8b;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 10px;
+
+  line-height: 1.75;
+
+  white-space: pre-wrap;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+  scroll-margin-top: 95px;
+
+  padding:
+    105px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+.section-label {
+  margin:
+    0 0 17px;
+
+  color: #5e5e5e;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+}
+
+.section-title {
+  max-width: 950px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      48px,
+      5vw,
+      70px
+    );
+
+  font-weight: 600;
+
+  line-height: 0.98;
+
+  letter-spacing: -3.5px;
+}
+
+.section-title span {
+  color: #575757;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(360px, 0.85fr);
+
+  gap: 65px;
+
+  margin-top: 50px;
+}
+
+.about-text {
+  max-width: 610px;
+}
+
+.about-text p {
+  margin:
+    0 0 21px;
+
+  color: #808080;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.about-text strong {
+  color: #c4c4c4;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ABOUT HIGHLIGHTS
+   ========================================================= */
+
+.about-highlight {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.about-highlight > div {
+  min-height: 104px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s var(--ease),
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.about-highlight > div:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border-color:
+    var(--border-hover);
+}
+
+.about-highlight strong {
+  margin-bottom: 5px;
+
+  color: #eeeeee;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.about-highlight span {
+  color: #606060;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SKILLS
+   IMPORTANT:
+   Auto-fill allows 20–30 skills without ugly giant cards.
+   ========================================================= */
+
+.skills {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(155px, 1fr)
+    );
+
+  gap: 9px;
+
+  margin-top: 42px;
+}
+
+.skill-card {
+  min-height: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    0 14px;
+
+  color: #c0c0c0;
+
+  background:
+    #0a0a0a;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 10px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s var(--ease);
+}
+
+.skill-card:hover {
+  color: #ffffff;
+
+  background:
+    #101010;
+
+  border-color:
+    var(--border-hover);
+
+  transform:
+    translateY(-2px);
+}
+
+.skill-dot {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 auto;
+
+  background: #555555;
+
+  border-radius: 50%;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-card:hover .skill-dot {
+  background:
+    var(--green);
+
+  box-shadow:
+    0 0 8px
+      rgba(74, 222, 128, 0.55);
+}
+
+.skill-name {
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience-list {
+  max-width: 980px;
+
+  margin-top: 43px;
+}
+
+.experience-card {
+  display: grid;
+
+  grid-template-columns:
+    130px
+    minmax(0, 1fr);
+
+  gap: 35px;
+
+  padding:
+    28px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+.experience-card:last-child {
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+.experience-year {
+  padding-top: 3px;
+
+  color: #555555;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 10px;
+}
+
+.experience-content h3 {
+  margin:
+    0 0 5px;
+
+  color: #eeeeee;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.4px;
+}
+
+.experience-content h4 {
+  margin:
+    0 0 11px;
+
+  color: #707070;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.experience-content p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #707070;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 43px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 235px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.01)
+    );
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s var(--ease),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform:
+    translateY(-4px);
+
+  background:
+    #0d0d0d;
+
+  border-color:
+    var(--border-hover);
+
+  box-shadow:
+    0 18px 40px
+      rgba(0, 0, 0, 0.24);
+}
+
+
+/* =========================================================
+   PROJECT TOP
+   ========================================================= */
+
+.project-top {
+  min-height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.project-number {
+  color: #555555;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 9px;
+}
+
+.project-github {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #747474;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 8px;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-github:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border-color:
+    var(--border-hover);
+}
+
+
+/* =========================================================
+   FEATURED
+   ========================================================= */
+
+.featured-label {
+  position: absolute;
+
+  top: 22px;
+
+  right: 52px;
+
+  padding:
+    4px 7px;
+
+  color: #888888;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 999px;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+   ========================================================= */
+
+.project-content {
+  margin-top: 23px;
+}
+
+.project-card h3 {
+  margin:
+    0 0 8px;
+
+  color: #ffffff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.5px;
+
+  line-height: 1.15;
+}
+
+.project-card p {
+  display: -webkit-box;
+
+  margin: 0;
+
+  color: #737373;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.project-tech {
+  margin-top: 12px;
+
+  color: #5e5e5e;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PROJECT LINKS
+   ========================================================= */
+
+.project-links {
+  margin-top: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding-top: 14px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+.project-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #b8b8b8;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.project-link:hover {
+  color: #ffffff;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+  padding-bottom: 110px;
+}
+
+.contact-intro {
+  max-width: 650px;
+
+  margin:
+    20px 0 0;
+
+  color: #737373;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin-top: 34px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.contact-fields {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label {
+  color: #626262;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  color: #ffffff;
+
+  background:
+    #0a0a0a;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form input {
+  height: 48px;
+
+  padding:
+    0 14px;
+}
+
+.contact-form textarea {
+  min-height: 145px;
+
+  padding:
+    13px 14px;
+
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #4d4d4d;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background:
+    #0e0e0e;
+
+  border-color:
+    rgba(255, 255, 255, 0.22);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================================
+   CONTACT SUBMIT
+   ========================================================= */
+
+.contact-submit-row {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 1px;
+}
+
+.contact-form button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   CONTACT STATUS
+   ========================================================= */
+
+.contact-status {
+  margin: 0;
+
+  padding:
+    11px 13px;
+
+  color: #72d99b;
+
+  background:
+    rgba(74, 222, 128, 0.045);
+
+  border:
+    1px solid
+    rgba(74, 222, 128, 0.13);
+
+  border-radius: 9px;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACT BUTTONS
+   ========================================================= */
+
+.contact-buttons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.empty-text {
+  color: #666666;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  width: min(
+    var(--container),
+    calc(100% - 64px)
+  );
+
+  margin: 0 auto;
+
+  padding:
+    24px 0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  color: #4d4d4d;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 9px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading-screen {
+  min-height: 100vh;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 30px;
+
+  color: #ffffff;
+
+  background:
+    var(--bg);
+}
+
+.loader {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.loader-dot {
+  width: 9px;
+  height: 9px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  animation:
+    loaderPulse 1s
+    ease-in-out
+    infinite;
+}
+
+.loader p {
+  margin: 0;
+
+  color: #5f5f5f;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 9px;
+}
+
+@keyframes loaderPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+
+    transform:
+      scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error-message {
+  width:
+    min(
+      480px,
+      100%
+    );
+
+  padding: 32px;
+
+  text-align: center;
+
+  background:
+    #0b0b0b;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 15px;
+}
+
+.error-label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #606060;
+
+  font-family:
+    "DM Mono",
+    monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+.error-message h2 {
+  margin:
+    0 0 10px;
+
+  color: #ffffff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+}
+
+.error-message p {
+  margin:
+    0 0 20px;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    #292929;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    #3c3c3c;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  main {
+    width:
+      calc(100% - 48px);
+  }
+
+  .navbar {
+    width:
+      calc(100% - 48px);
+  }
+
+  .hero {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(330px, 0.82fr);
+
+    gap: 45px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        66px,
+        8vw,
+        92px
+      );
+  }
+
+  .profile-photo-card {
+    width: 250px;
+    height: 300px;
+  }
+
+  .projects {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .skills {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    width:
+      calc(100% - 32px);
+  }
+
+  main {
+    width:
+      calc(100% - 32px);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding:
+      140px 0 90px;
+
+    gap: 55px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    align-items: center;
+  }
+
+  .profile-photo-card {
+    width: 270px;
+    height: 325px;
+  }
+
+  .code-card {
+    width:
+      min(
+        100%,
+        650px
+      );
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    max-width: 720px;
+  }
+
+  .projects {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .skills {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    top: 10px;
+
+    width:
+      calc(100% - 22px);
+
+    height: 62px;
+
+    padding:
+      0 12px;
+
+    border-radius: 14px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .logo span {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-socials {
+    gap: 5px;
+  }
+
+  .nav-socials a {
+    width: 34px;
+    height: 34px;
+  }
+
+  main {
+    width:
+      calc(100% - 28px);
+  }
+
+  .hero {
+    padding:
+      115px 0 75px;
+
+    gap: 48px;
+  }
+
+  .status {
+    margin-bottom: 23px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        57px,
+        17vw,
+        78px
+      );
+
+    letter-spacing: -4px;
+  }
+
+  .hero h2 {
+    margin-top: 22px;
+
+    font-size: 22px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+  }
+
+  .hero-buttons
+  .primary-button,
+  .hero-buttons
+  .secondary-button {
+    width: 100%;
+  }
+
+  .hero-stats {
+    gap: 12px;
+
+    margin-top: 32px;
+  }
+
+  .hero-stats strong {
+    font-size: 19px;
+  }
+
+  .hero-stats span {
+    font-size: 8px;
+  }
+
+  .profile-photo-card {
+    width: 220px;
+    height: 270px;
+  }
+
+  .profile-badge {
+    right: -25px;
+  }
+
+  .code-card {
+    width: 100%;
+  }
+
+  .code-card pre {
+    padding: 17px;
+
+    font-size: 8.5px;
+
+    line-height: 1.7;
+  }
+
+  .section {
+    padding:
+      78px 0;
+
+    scroll-margin-top: 80px;
+  }
+
+  .section-title {
+    font-size: 42px;
+
+    letter-spacing: -2.3px;
+  }
+
+  .about-grid {
+    margin-top: 37px;
+
+    gap: 32px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+
+  .about-highlight {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .skills {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    margin-top: 34px;
+
+    gap: 8px;
+  }
+
+  .skill-card {
+    min-height: 52px;
+
+    padding:
+      0 12px;
+
+    font-size: 11px;
+  }
+
+  .experience-list {
+    margin-top: 35px;
+  }
+
+  .experience-card {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    padding:
+      23px 0;
+  }
+
+  .experience-year {
+    padding-top: 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+
+    margin-top: 35px;
+  }
+
+  .project-card {
+    min-height: 220px;
+  }
+
+  .contact-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .contact-buttons a {
+    width: 100%;
+  }
+
+  footer {
+    width:
+      calc(100% - 28px);
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 54px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero-stats {
+    gap: 8px;
+  }
+
+  .hero-stats strong {
+    font-size: 17px;
+  }
+
+  .hero-stats span {
+    font-size: 7px;
+  }
+
+  .profile-photo-card {
+    width: 205px;
+    height: 250px;
+  }
+
+  .profile-badge {
+    right: -23px;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlight {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 215px;
+
+    padding: 17px;
+  }
+}
