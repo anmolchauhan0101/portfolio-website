@@ -67,19 +67,11 @@ The portfolio features a React-based frontend, Node.js/Express backend, and Mong
 <img width="1920" height="883" alt="image" src="https://github.com/user-attachments/assets/5258639f-bedc-4e0d-81fe-da587e0ebee5" />
 <img width="1920" height="875" alt="image" src="https://github.com/user-attachments/assets/0e7904d8-a7de-41ec-97e8-c414b6f8f5ac" />
 
-
+---
 👨‍💻 About Me
 
 I'm Anmol Chauhan, a Computer Science student and Full Stack Developer interested in building practical, scalable, and user-focused web applications.
 
-My current areas of interest include:
-
-Full Stack Development
-Data Structures & Algorithms
-Backend Development
-Database Management
-Machine Learning
-Problem Solving
 
 ⭐ Support
 
