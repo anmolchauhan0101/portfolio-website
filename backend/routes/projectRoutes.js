@@ -2,7 +2,7 @@ const express = require("express");
 
 const {
   getProjects,
-} = require("../controllers/projectController");
+} = require("../controllers/ProjectController");
 
 const router = express.Router();
 

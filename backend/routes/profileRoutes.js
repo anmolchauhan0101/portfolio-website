@@ -2,7 +2,7 @@ const express = require("express");
 
 const {
   getProfile,
-} = require("../controllers/profileController");
+} = require("../controllers/ProfileController");
 
 const router = express.Router();
 
