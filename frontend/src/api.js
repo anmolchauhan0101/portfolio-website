@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://anmol-portfolio-backend.onrender.com";
 
 export async function getProfile() {
   const response = await fetch(`${API_URL}/profile`);
