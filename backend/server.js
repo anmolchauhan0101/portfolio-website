@@ -23,7 +23,10 @@ connectDB();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://portfolio-website-alpha-one-52.vercel.app",
+    ],
     methods: ["GET", "POST"],
   })
 );
@@ -60,5 +63,5 @@ app.use((err, req, res, next) => {
 /* ================= SERVER ================= */
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
